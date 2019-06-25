@@ -10,23 +10,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9" style="background-color: #fff">
-        <div class="row">
+        <div class="row" *ngIf="list[0]">
           <img
             src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/white-dress-girl-in-nature-770x515.jpg">
           <div class="post">
             <h2>
-              <a class="bold" [routerLink]="['/detail/', '1']">Angular Router</a>
+              <a class="bold" [routerLink]="['/detail/', '1']">{{list[0].title}}</a>
             </h2>
             <p style="margin-bottom: 0rem">
               {{today | date:'yyyy-MM-dd'}}
             </p>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-              rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-              explicabo.
-              Disrupt vero ea id fugiat, lo-fi lomo post-ironic irony kitsch Banksy. Tumblr kale stumptown beer elit
-              seitan tote bag Banksy, elit small batch fregan sed.
-            </p>
+<!--            <p>-->
+<!--              {{list[0].title}}-->
+<!--            </p>-->
           </div>
           <p>
           <p style="margin-bottom: 0rem">
