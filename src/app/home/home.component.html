@@ -9,13 +9,13 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-9" style="background-color: #fff">
         <div class="row">
           <img
             src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/white-dress-girl-in-nature-770x515.jpg">
           <div class="post">
             <h2>
-              <a class="bold" href="https://www.facebook.com/Nhimnhinhanh2203" target="_blank">Angular Router</a>
+              <a class="bold" [routerLink]="['/detail/', '1']">Angular Router</a>
             </h2>
             <p style="margin-bottom: 0rem">
               {{today | date:'yyyy-MM-dd'}}
@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" style="background-color: #fff">
         <h2>Facebook</h2>
         <div class="fb-page fb_iframe_widget" data-href="https://www.facebook.com/LapTrinhThatKyDieu/"
              data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
