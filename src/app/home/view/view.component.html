@@ -1,0 +1,12 @@
+<div class="banner">
+  <div class="container">
+    <h1 class="logo-font">Angular</h1>
+    <p>A place to share your <i>Angular</i> knowledge.</p>
+  </div>
+</div>
+<div class="container" *ngIf="model">
+  <h1>{{model.title}}</h1>
+  <div class="row">
+    <p [innerHTML]="model.content"></p>
+  </div>
+</div>
