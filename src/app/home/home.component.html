@@ -15,7 +15,7 @@
             src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/white-dress-girl-in-nature-770x515.jpg">
           <div class="post">
             <h2>
-              <a class="bold" [routerLink]="['/detail/', '1']">{{list[0].title}}</a>
+              <a class="bold" [routerLink]="['/detail/', list[0].id]">{{list[0].title}}</a>
             </h2>
             <p style="margin-bottom: 0rem">
               {{today | date:'yyyy-MM-dd'}}
