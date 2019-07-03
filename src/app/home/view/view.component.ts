@@ -21,6 +21,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit() {
     this.route.params.subscribe(data => {
+      console.log(data.id)
       this.http.get(environment.api_url + 'posts/' + data.id).subscribe((res: Post) => {
         this.model = res;
       });
