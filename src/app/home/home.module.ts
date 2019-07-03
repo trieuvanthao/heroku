@@ -4,6 +4,8 @@ import { HomeComponent } from './home.component';
 import {RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { ViewComponent } from './view/view.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +21,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ]
 })
 export class HomeModule { }

@@ -9,6 +9,9 @@ import {HomeModule} from './home/home.module';
 import {AuthModule} from './auth/auth.module';
 import {HeaderComponent} from './shared/header.component';
 import {FooterComponent} from './shared/footer/footer.component';
+import {MatProgressSpinnerModule} from '@angular/material';
+import {HttpClientModule} from '@angular/common/http';
+import {NgxLoadingModule} from 'ngx-loading';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import {FooterComponent} from './shared/footer/footer.component';
     AppRoutingModule,
     RouterModule,
     HomeModule,
-    AuthModule
+    AuthModule,
+    MatProgressSpinnerModule,
+    HttpClientModule,
+    NgxLoadingModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,12 +10,12 @@
   <div class="container">
     <div class="row">
       <div class="col-md-9" style="background-color: #fff">
-        <div class="row" *ngIf="list[0]">
+        <div class="row" *ngFor="let item of list | paginate: { itemsPerPage: 2, currentPage: p }">
           <img
             src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/white-dress-girl-in-nature-770x515.jpg">
           <div class="post">
             <h2>
-              <a class="bold" [routerLink]="['/detail/', list[0].id]">{{list[0].title}}</a>
+              <a class="bold" [routerLink]="['/detail/', list[0].id]">{{item.title}}</a>
             </h2>
             <p style="margin-bottom: 0rem">
               {{today | date:'yyyy-MM-dd'}}
@@ -29,40 +29,41 @@
 
           </p>
         </div>
-        <div class="row">
-          <div class="col-md-6" style="padding: 0px">
-            <img src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/walking-on-the-streets-369x246.jpg">
-            <div class="post">
-              <a class="bold" href="https://www.facebook.com/Nhimnhinhanh2203" target="_blank">Angular Router</a>
-              <p style="margin-bottom: 0rem">
-                {{today | date:'yyyy-MM-dd'}}
-              </p>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                explicabo.
-                Disrupt vero ea id fugiat, lo-fi lomo post-ironic irony kitsch Banksy. Tumblr kale stumptown beer elit
-                seitan tote bag Banksy, elit small batch fregan sed.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6" style="padding: 0px;">
-            <img src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/walking-on-the-streets-369x246.jpg">
-            <div class="post">
-              <a class="bold" href="https://www.facebook.com/Nhimnhinhanh2203" target="_blank">Angular Router</a>
-              <p style="margin-bottom: 0rem">
-                {{today | date:'yyyy-MM-dd'}}
-              </p>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                explicabo.
-                Disrupt vero ea id fugiat, lo-fi lomo post-ironic irony kitsch Banksy. Tumblr kale stumptown beer elit
-                seitan tote bag Banksy, elit small batch fregan sed.
-              </p>
-            </div>
-          </div>
-        </div>
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+<!--        <div class="row">-->
+<!--          <div class="col-md-6" style="padding: 0px">-->
+<!--            <img src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/walking-on-the-streets-369x246.jpg">-->
+<!--            <div class="post">-->
+<!--              <a class="bold" href="https://www.facebook.com/Nhimnhinhanh2203" target="_blank">Angular Router</a>-->
+<!--              <p style="margin-bottom: 0rem">-->
+<!--                {{today | date:'yyyy-MM-dd'}}-->
+<!--              </p>-->
+<!--              <p>-->
+<!--                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam-->
+<!--                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt-->
+<!--                explicabo.-->
+<!--                Disrupt vero ea id fugiat, lo-fi lomo post-ironic irony kitsch Banksy. Tumblr kale stumptown beer elit-->
+<!--                seitan tote bag Banksy, elit small batch fregan sed.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="col-md-6" style="padding: 0px;">-->
+<!--            <img src="http://theme-sphere.com/smart-blog/wp-content/uploads/2015/11/walking-on-the-streets-369x246.jpg">-->
+<!--            <div class="post">-->
+<!--              <a class="bold" href="https://www.facebook.com/Nhimnhinhanh2203" target="_blank">Angular Router</a>-->
+<!--              <p style="margin-bottom: 0rem">-->
+<!--                {{today | date:'yyyy-MM-dd'}}-->
+<!--              </p>-->
+<!--              <p>-->
+<!--                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam-->
+<!--                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt-->
+<!--                explicabo.-->
+<!--                Disrupt vero ea id fugiat, lo-fi lomo post-ironic irony kitsch Banksy. Tumblr kale stumptown beer elit-->
+<!--                seitan tote bag Banksy, elit small batch fregan sed.-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
       </div>
       <div class="col-md-3" style="background-color: #fff">
         <h2>Facebook</h2>
