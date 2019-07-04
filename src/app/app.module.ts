@@ -12,6 +12,7 @@ import {FooterComponent} from './shared/footer/footer.component';
 import {MatProgressSpinnerModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {NgxLoadingModule} from 'ngx-loading';
+import {NgxSpinnerModule} from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {NgxLoadingModule} from 'ngx-loading';
     AuthModule,
     MatProgressSpinnerModule,
     HttpClientModule,
-    NgxLoadingModule.forRoot({})
+    NgxLoadingModule.forRoot({}),
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
