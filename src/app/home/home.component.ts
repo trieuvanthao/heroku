@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {HomeService} from './home.service';
 import {HttpClient} from '@angular/common/http';
 import {PageService} from '../services/PageService';
-import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -24,17 +23,11 @@ export class HomeComponent implements OnInit {
     private homeService: HomeService,
     private http: HttpClient,
     private pageService: PageService,
-    private spinner: NgxSpinnerService
   ) {
 
   }
 
   ngOnInit() {
-    this.spinner.show();
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 5000);
 
     this.homeService.load().subscribe((data => {
       this.list = data;
